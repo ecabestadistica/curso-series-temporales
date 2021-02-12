@@ -27,13 +27,12 @@ points(omad$ind, x[omad$ind], pch=21, col="darkred")
 
 
 # Nueva serie sin atípicos
-x_new=x
-x_new[omad$ind]=median(x)
+x_new=omad$y
 
 
 # Ambas series
-plot(1:1024, x, type="l",col="red",xlim=c(0, 1050), ylim=c(-20,30))
+plot(1:1024, x, type="l",col="red",xlim=c(0, 1050), ylim=c(-60,70))
 par(new=TRUE)
-plot(1:1024, x_new, type="l",col="blue",xlim=c(0, 1050), ylim=c(-20,30),axes= FALSE, xlab='', ylab='' )
+plot(1:1024, x_new, type="l",col="blue",xlim=c(0, 1050), ylim=c(-60,70),axes= FALSE, xlab='', ylab='' )
   
   
